@@ -232,7 +232,7 @@ export type MeQuery = (
 
 export type PostsQueryVariables = Exact<{
   limit: Scalars['Int'];
-  cursor: Scalars['String'];
+  cursor?: Maybe<Scalars['String']>;
 }>;
 
 
@@ -240,7 +240,7 @@ export type PostsQuery = (
   { __typename?: 'Query' }
   & { posts: Array<(
     { __typename?: 'Post' }
-    & Pick<Post, 'id' | 'createdAt' | 'updatedAt' | 'title'>
+    & Pick<Post, 'id' | 'createdAt' | 'updatedAt' | 'title' | 'text'>
   )> }
 );
 
@@ -346,12 +346,13 @@ export function useMeQuery(options: Omit<Urql.UseQueryArgs<MeQueryVariables>, 'q
   return Urql.useQuery<MeQuery>({ query: MeDocument, ...options });
 };
 export const PostsDocument = gql`
-    query Posts($limit: Int!, $cursor: String!) {
+    query Posts($limit: Int!, $cursor: String) {
   posts(cursor: $cursor, limit: $limit) {
     id
     createdAt
     updatedAt
     title
+    text
   }
 }
     `;
