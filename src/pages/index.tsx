@@ -28,10 +28,10 @@ const Index = () => {
 
   if (!fetching && !data) {
     return (
-      <div>
-        <div>Something wrong happened.</div>
-        <div>{error?.message}</div>
-      </div>
+      <Box>
+        <Box>Something wrong happened.</Box>
+        <Box>{error?.message}</Box>
+      </Box>
     );
   }
 
