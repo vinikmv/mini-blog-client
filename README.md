@@ -1,6 +1,6 @@
 ## Introduction
 
-Simple reddit copy
+Simple reddit clone
 
 Link: https://mireddit.viniciuskmv.codes/
 
