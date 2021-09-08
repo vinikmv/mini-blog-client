@@ -14,14 +14,6 @@ Few things you can do with MiReddit:
 - View list of posts on main page
 - Register / Login
 
-## TO-DO
-
-- Improve page design
-- Improve register page
-- Create a user profile page
-- Comment on post
-- Add sorting options
-
 ## Build Process
 
 - Clone or download the repo
